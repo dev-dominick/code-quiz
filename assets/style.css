@@ -1,3 +1,15 @@
 body {
-  background-color: black;
+  background-color: yellow;
+}
+
+header {
+  text-align: center;
+}
+
+section {
+  text-align: center;
+}
+
+#button {
+  text-align: center;
 }
