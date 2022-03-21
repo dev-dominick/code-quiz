@@ -27,27 +27,20 @@ let questions = [
 ];
 
 
-
-
-
-
-
-
-
-let generateBtn = document.querySelector("#start-button");
+let startBtn = document.querySelector("#start-button");
 
 let clock = document.querySelector("#clock")
 
 let secondsLeft = 60;
 
-generateBtn.addEventListener("click", startTimer);
+startBtn.addEventListener("click", startTimer);
 
 function startTimer() {
   let timerInterval = setInterval(() => {
     secondsLeft--;
     clock.textContent = secondsLeft;
 
-    if (secondsLeft === 0) {
+    if (secondsLeft <= 0) {
 
       clearInterval(timerInterval);
     }
