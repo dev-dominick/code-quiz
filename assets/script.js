@@ -1,3 +1,5 @@
+//Array of objects which are holding the questions
+
 let questions = [
   {
     poll: "Commonly used data types DO NOT include?",
@@ -26,19 +28,25 @@ let questions = [
   },
 ];
 
+//Default data at start of quiz
+let userAnswer = []
+let secondsLeft = 60;
+let score = 0;
+let questionIndex = 0;
+
 
 let startBtn = document.querySelector("#start-button");
 
 let clock = document.querySelector("#clock")
 
-let secondsLeft = 60;
+
 
 startBtn.addEventListener("click", startTimer);
 
 function startTimer() {
   let timerInterval = setInterval(() => {
     secondsLeft--;
-    clock.textContent = secondsLeft;
+    clock.textContent = "Time: " + secondsLeft;
 
     if (secondsLeft <= 0) {
 
