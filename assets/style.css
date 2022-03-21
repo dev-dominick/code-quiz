@@ -10,6 +10,16 @@ section {
   text-align: center;
 }
 
-#button {
+#start-button {
   text-align: center;
+}
+
+#clock {
+  text-align: right;
+}
+
+.button {
+  
+  text-align: center;
+  
 }

@@ -1,24 +1,63 @@
-let generateBtn = document.querySelector("#button");
+let questions = [
+  {
+    poll: "Commonly used data types DO NOT include?",
+    choices: ["Strings", "Booleans", "Alerts", "Numbers"],
+    answer: "Alerts",
+  },
+  {
+    poll: "The condition in an if / else statement is enclosed within _____.",
+    choices: ["Quotes", "Curly Brackets", "Parenthesis", "Square Brackets"],
+    answer: "Curly Brackets",
+  },
+  {
+    poll: "Arrays in JavaScript can be used to store _______.",
+    choices: ["Numbers and Strings", "Other Arrays", "Booleans", "All of the Above"],
+    answer: "All of the Above",
+  },
+  {
+    poll: "String values must be enclosed within _____ when being assigned to variables",
+    choices: ["Commas", "Curly Brackets", "Quotes", "Parenthesis"],
+    answer: "Parenthesis",
+  },
+  {
+    poll: "A very useful tool used during development and debugging for printing content to the debugger is:",
+    choices: ["JavaScript", "Terminal / Bash", "For Loops", "console.log"],
+    answer: "JavaScript",
+  },
+];
+
+
+
+
+
+
+
+
+
+let generateBtn = document.querySelector("#start-button");
 
 let clock = document.querySelector("#clock")
 
-let secondsleft = 60;
+let secondsLeft = 60;
 
 generateBtn.addEventListener("click", startTimer);
 
 function startTimer() {
   let timerInterval = setInterval(() => {
-    secondsleft--;
-    clock.textContent = secondsleft;
+    secondsLeft--;
+    clock.textContent = secondsLeft;
 
     if (secondsLeft === 0) {
-      clearInterval(timerInterval)
+
+      clearInterval(timerInterval);
     }
 
   }, 1000);
 
-  
-}
+};
+
+
+
 
  
 
