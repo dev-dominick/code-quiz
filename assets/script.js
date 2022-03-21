@@ -1,15 +1,31 @@
+let generateBtn = document.querySelector("#button");
 
+let clock = document.querySelector("#clock")
 
+let secondsleft = 60;
 
+generateBtn.addEventListener("click", startTimer);
 
+function startTimer() {
+  let timerInterval = setInterval(() => {
+    secondsleft--;
+    clock.textContent = secondsleft;
 
+    if (secondsLeft === 0) {
+      clearInterval(timerInterval)
+    }
+
+  }, 1000);
+
+  
+}
+
+ 
 
 
 // GIVEN I am taking a code quiz
 // WHEN I click the start button
 // THEN a timer starts and I am presented with a question
-
-
 
 //make start button
 //hook button up to begin timer
@@ -20,19 +36,15 @@
 
 //on click to to pass to next question
 
-
 // WHEN I answer a question incorrectly
 // THEN time is subtracted from the clock
 
 //time penalty for wrong answer
 
-
-
 // WHEN all questions are answered or the timer reaches 0
 // THEN the game is over
 
 //condition for when timer = 0 to end the game
-
 
 // WHEN the game is over
 // THEN I can save my initials and my score
