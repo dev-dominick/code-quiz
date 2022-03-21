@@ -30,12 +30,12 @@ let questions = [
 
 //Default data at start of quiz
 let userAnswer = []
-let secondsLeft = 60;
+let secondsLeft = questions.length * 15;
 let score = 0;
 let questionIndex = 0;
 
 
-let startBtn = document.querySelector("#start-button");
+let startBtn = document.querySelector("#start-btn");
 
 let clock = document.querySelector("#clock")
 
@@ -56,6 +56,13 @@ function startTimer() {
   }, 1000);
 
 };
+
+// iterate .foreach and pass through a choice and i of for loop
+ 
+
+//3. take answer and compare against correct answer
+//can add point deduction in this function
+//if you touch time then update time
 
 
 

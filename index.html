@@ -8,29 +8,36 @@
     <link rel="stylesheet" href="./assets/style.css" />
   </head>
   <body>
-    <header>
-      <h1>Code Quiz</h1>
-    </header>
+    <div>Hi-Scores</div>
 
-    <section>
+    <div id="clock">Time: <span id="timer">0</span> </div>
+
+<!-- set attr -->
+    <section id="start">
+      <h1>Code Quiz</h1>
       <p>Hi! Welcome to the quiz! Good luck!!</p>
+      <button id="start-btn">Start</button>
+    
     </section>
 
-    <div id="start-button">
-      <button>Start</button>
-    </div>
+    
 
-    <h1 id="clock"></h1>
-
-    <section>
-      <h2>Question 1</h2>
-
-      <button class="button">A.</button>
+    <section class="hide">
+      <h2 id="questions">Questions</h2>
+      <div id="choices"></div>
+      <!-- <button class="button">A.</button>
       <button class="button">B.</button>
       <button class="button">C.</button>
-      <button class="button">D.</button>
+      <button class="button">D.</button> -->
     </section>
 
+      <section id="end" class="hide">
+      <h2>Code Quiz</h2>
+      <!-- add input box -->
+      <p>Enter Initials<input></input><button id="start-btn">Start</button> </p>
+      
+    
+    </section>
    
 
     <script src="./assets/script.js"></script>
