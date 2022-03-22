@@ -33,7 +33,10 @@ let userAnswer = []
 let secondsLeft = questions.length * 15;
 let score = 0;
 let questionIndex = 0;
-
+let selectOne = document.querySelector("#btn1")
+let selectTwo = document.querySelector("#btn2")
+let selectThree = document.querySelector("#btn3")
+let selectFour = document.querySelector("#btn4")
 
 let startBtn = document.querySelector("#start-btn");
 
@@ -41,7 +44,7 @@ let clock = document.querySelector("#clock")
 
 
 
-startBtn.addEventListener("click", startTimer);
+startBtn.addEventListener("click", startQuiz);
 
 function startTimer() {
   let timerInterval = setInterval(() => {
@@ -57,6 +60,25 @@ function startTimer() {
 
 };
 
+
+function startQuiz() {
+    startTimer();
+    document.getElementById("start").style.display = "none";
+    questions.classList.add("#questionChoices")
+    displayQuestions();
+}
+
+function displayQuestions() {
+    var questions = questions[questionIndex]
+    questionQuiz.textContent = varQuestions.question
+
+    for (let i = 0; i < varQuestions.answers.length; i++) {
+        let choices = varQuestions.answers[i];
+        var choice = document.createElement("button")
+        choice.setAttribute("class", "choice")
+        choice.setAttribute("value", options)
+        }
+      };
 // iterate .foreach and pass through a choice and i of for loop
  
 
