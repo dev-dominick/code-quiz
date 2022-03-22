@@ -29,21 +29,16 @@ No installation is required to run this application.
 
 ## Usage
 
-Provide instructions and examples for use. Include screenshots as needed.
+https://dev-dominick.github.io/code-quiz/
 
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
+![alt text](./img/quiz-pic.png)
 
-    ```md
-    ![alt text](assets/images/screenshot.png)
-    ```
 
 ## Credits
 
-List your collaborators, if any, with links to their GitHub profiles.
-
-If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
-
-If you followed tutorials, include links to those here as well.
+Isaak - https://github.com/CallMeIce
+Kyle - https://github.com/kgiunta
+Julian - https://github.com/julianr3
 
 ## License
 
@@ -65,7 +60,7 @@ N/A
 
 ## Features
 
-
+N/A
 
 ## How to Contribute
 
