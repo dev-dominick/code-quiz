@@ -37,7 +37,7 @@ let selectOne = document.querySelector("#btn1")
 let selectTwo = document.querySelector("#btn2")
 let selectThree = document.querySelector("#btn3")
 let selectFour = document.querySelector("#btn4")
-var choice1Container = document.getElementById("btn1")
+let choice1Container = document.getElementById("btn1")
 let choice2Container = document.getElementById("btn2")
 let choice3Container = document.getElementById("btn3")
 let choice4Container = document.getElementById("btn4")
@@ -139,41 +139,3 @@ function endGame() {
 }
 
 
-
-// iterate .foreach and pass through a choice and i of for loop
-
-
-
-
-
-//3. take answer and compare against correct answer
-//can add point deduction in this function
-//if you touch time then update time
-
-
-
-
- 
-
-
-// GIVEN I am taking a code quiz
-// WHEN I click the start button
-// THEN a timer starts and I am presented with a question
-
-// WHEN I answer a question
-// THEN I am presented with another question
-
-//on click to to pass to next question
-
-// WHEN I answer a question incorrectly
-// THEN time is subtracted from the clock
-
-//time penalty for wrong answer
-
-// WHEN all questions are answered or the timer reaches 0
-// THEN the game is over
-
-//condition for when timer = 0 to end the game
-
-// WHEN the game is over
-// THEN I can save my initials and my score
