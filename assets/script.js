@@ -37,7 +37,7 @@ let selectOne = document.querySelector("#btn1")
 let selectTwo = document.querySelector("#btn2")
 let selectThree = document.querySelector("#btn3")
 let selectFour = document.querySelector("#btn4")
-
+let container = document.getElementById("choices")
 let startBtn = document.querySelector("#start-btn");
 
 let clock = document.querySelector("#clock")
@@ -64,23 +64,30 @@ function startTimer() {
 function startQuiz() {
     startTimer();
     document.getElementById("start").style.display = "none";
-    questions.classList.add("#questionChoices")
+    document.getElementById("end").style.display = "none";
+    // document.getElementById("choices").style.display = "inline"
     displayQuestions();
 }
 
 function displayQuestions() {
-    var questions = questions[questionIndex]
-    questionQuiz.textContent = varQuestions.question
+    let quizEl = questions[questionIndex]
+    questions.textContent = questions.poll
+    // multipleChoice.textContent = questions
+    
+    for (let i = 0; i < questions.poll.length; i++) {
+        let options = questions.poll[i];
+        let optionEl = document.createElement("button")
 
-    for (let i = 0; i < varQuestions.answers.length; i++) {
-        let choices = varQuestions.answers[i];
-        var choice = document.createElement("button")
+        // var choice = document.createElement("button")
         choice.setAttribute("class", "choice")
         choice.setAttribute("value", options)
         }
       };
 // iterate .foreach and pass through a choice and i of for loop
- 
+
+
+
+
 
 //3. take answer and compare against correct answer
 //can add point deduction in this function
