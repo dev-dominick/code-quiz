@@ -37,7 +37,7 @@ let selectOne = document.querySelector("#btn1")
 let selectTwo = document.querySelector("#btn2")
 let selectThree = document.querySelector("#btn3")
 let selectFour = document.querySelector("#btn4")
-let choice1Container = document.getElementById("btn1")
+var choice1Container = document.getElementById("btn1")
 let choice2Container = document.getElementById("btn2")
 let choice3Container = document.getElementById("btn3")
 let choice4Container = document.getElementById("btn4")
@@ -65,36 +65,54 @@ function startQuiz() {
     startTimer();
     document.getElementById("start").style.display = "none";
     document.getElementById("end").style.display = "none";
-    document.getElementById("choices").style.display = "inline"
+    // document.getElementById("choices").style.display = "inline"
     displayQuestions();
 }
 
 function displayQuestions() {
+    let pollEl = questions[questionIndex].poll;
+
+    questionH2.textContent = pollEl;
+
+    choice1Container.textContent = questions[questionIndex].choices[0];
+    choice1Container.addEventListener("click", changeQuestion)
+    
+
+    let choice2 = questions[questionIndex].choices[1];
+    choice2Container.textContent = choice2;
+    choice2Container.addEventListener("click", changeQuestion);
+
+    let choice3 = questions[questionIndex].choices[2];
+    choice3Container.textContent = choice3;
+    choice3Container.addEventListener("click", changeQuestion);
+
+    let choice4 = questions[questionIndex].choices[3];
+    choice4Container.textContent = choice4;
+    choice4Container.addEventListener("click", changeQuestion);
     
     // multipleChoice.textContent = questions
-    // for (let i = 0; i < questions[0].poll.length; i++) 
-    {
-        let currentQuestion = questions[questionIndex].poll;
-        questionH2.textContent = currentQuestion;
-
-        let choice1 = questions[questionIndex].choices[0];
-        choice1Container.textContent = choice1;
-
-        let choice2 = questions[questionIndex].choices[1];
-        choice2Container.textContent = choice2;
-
-        let choice3 = questions[questionIndex].choices[2];
-        choice3Container.textContent = choice3;
-
-        let choice4 = questions[questionIndex].choices[3];
-        choice4Container.textContent = choice4;
+    // for (let i = 0; i < questions[0].poll.length; i++) {
         
+    //   poll[i]++ 
         
+    //     }
+     };
 
-        
-        }
-      };
+function changeQuestion(event) {
+  console.log(event.target.textContent);
+  let userChoice = event.target.textContent;
 
+  if (userChoice === questions[questionIndex].answer) {
+
+    questionIndex++;
+    displayQuestions();
+
+  } else {
+    secondsLeft = secondsLeft - 15;
+    questionIndex++;
+    displayQuestions();
+  }
+}
 
 
 
@@ -117,10 +135,6 @@ function displayQuestions() {
 // GIVEN I am taking a code quiz
 // WHEN I click the start button
 // THEN a timer starts and I am presented with a question
-
-//make start button
-//hook button up to begin timer
-//set interval
 
 // WHEN I answer a question
 // THEN I am presented with another question
