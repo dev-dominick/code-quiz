@@ -44,6 +44,13 @@ let choice4Container = document.getElementById("btn4")
 let startBtn = document.querySelector("#start-btn");
 let questionH2 = document.getElementById("questions")
 let clock = document.querySelector("#clock")
+document.getElementById("end").style.display = "none";
+document.getElementById("btn1").style.visibility = "hidden";
+document.getElementById("btn2").style.visibility = "hidden";
+document.getElementById("btn3").style.visibility = "hidden";
+document.getElementById("btn4").style.visibility = "hidden";
+document.getElementById("clock").style.visibility = "hidden"
+document.getElementById("hiScore").style.visibility = "hidden"
 
 startBtn.addEventListener("click", startQuiz);
 
@@ -67,6 +74,12 @@ function startQuiz() {
     document.getElementById("end").style.display = "none";
     // document.getElementById("choices").style.display = "inline"
     displayQuestions();
+    document.getElementById("btn1").style.visibility = "visible";
+    document.getElementById("btn2").style.visibility = "visible";
+    document.getElementById("btn3").style.visibility = "visible";
+    document.getElementById("btn4").style.visibility = "visible";
+    document.getElementById("clock").style.visibility = "visible";
+
 }
 
 function displayQuestions() {
@@ -112,6 +125,17 @@ function changeQuestion(event) {
     questionIndex++;
     displayQuestions();
   }
+};
+
+function endGame() {
+  console.log(secondsLeft);
+  clearInterval(timerInterval)
+
+  if (questionIndex === questions[4]) {
+
+  }
+
+
 }
 
 
