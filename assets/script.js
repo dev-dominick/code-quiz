@@ -37,12 +37,13 @@ let selectOne = document.querySelector("#btn1")
 let selectTwo = document.querySelector("#btn2")
 let selectThree = document.querySelector("#btn3")
 let selectFour = document.querySelector("#btn4")
-let choicesContainer = document.getElementById("choices")
+let choice1Container = document.getElementById("btn1")
+let choice2Container = document.getElementById("btn2")
+let choice3Container = document.getElementById("btn3")
+let choice4Container = document.getElementById("btn4")
 let startBtn = document.querySelector("#start-btn");
 let questionH2 = document.getElementById("questions")
 let clock = document.querySelector("#clock")
-
-
 
 startBtn.addEventListener("click", startQuiz);
 
@@ -60,7 +61,6 @@ function startTimer() {
 
 };
 
-
 function startQuiz() {
     startTimer();
     document.getElementById("start").style.display = "none";
@@ -70,22 +70,34 @@ function startQuiz() {
 }
 
 function displayQuestions() {
-    let pollEl = questions[questionIndex].poll
-    questionH2.textContent = pollEl
-    let choiceEl = questions[questionIndex].choices
-    choicesContainer.textContent = choiceEl
-    // multipleChoice.textContent = questions
     
-    for (let i = 0; i < questions[0].poll.length; i++) {
-        let options = questions[0].choices[i];
+    // multipleChoice.textContent = questions
+    // for (let i = 0; i < questions[0].poll.length; i++) 
+    {
+        let currentQuestion = questions[questionIndex].poll;
+        questionH2.textContent = currentQuestion;
+
+        let choice1 = questions[questionIndex].choices[0];
+        choice1Container.textContent = choice1;
+
+        let choice2 = questions[questionIndex].choices[1];
+        choice2Container.textContent = choice2;
+
+        let choice3 = questions[questionIndex].choices[2];
+        choice3Container.textContent = choice3;
+
+        let choice4 = questions[questionIndex].choices[3];
+        choice4Container.textContent = choice4;
         
         
 
-        // var choice = document.createElement("button")
-        choice.setAttribute("class", "choice")
-        choice.setAttribute("value", options)
+        
         }
       };
+
+
+
+
 // iterate .foreach and pass through a choice and i of for loop
 
 
