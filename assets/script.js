@@ -60,7 +60,7 @@ function startTimer() {
     clock.textContent = "Time: " + secondsLeft;
 
     if (secondsLeft <= 0) {
-
+      
       clearInterval(timerInterval);
     }
 
@@ -131,8 +131,8 @@ function endGame() {
   console.log(secondsLeft);
   clearInterval(timerInterval)
 
-  if (questionIndex === questions[4]) {
-
+  if (secondsLeft <= 0 ) {
+    prompt("Game is over!")
   }
 
 
