@@ -37,9 +37,9 @@ let selectOne = document.querySelector("#btn1")
 let selectTwo = document.querySelector("#btn2")
 let selectThree = document.querySelector("#btn3")
 let selectFour = document.querySelector("#btn4")
-let container = document.getElementById("choices")
+let choicesContainer = document.getElementById("choices")
 let startBtn = document.querySelector("#start-btn");
-
+let questionH2 = document.getElementById("questions")
 let clock = document.querySelector("#clock")
 
 
@@ -65,18 +65,21 @@ function startQuiz() {
     startTimer();
     document.getElementById("start").style.display = "none";
     document.getElementById("end").style.display = "none";
-    // document.getElementById("choices").style.display = "inline"
+    document.getElementById("choices").style.display = "inline"
     displayQuestions();
 }
 
 function displayQuestions() {
-    let quizEl = questions[questionIndex]
-    questions.textContent = questions.poll
+    let pollEl = questions[questionIndex].poll
+    questionH2.textContent = pollEl
+    let choiceEl = questions[questionIndex].choices
+    choicesContainer.textContent = choiceEl
     // multipleChoice.textContent = questions
     
-    for (let i = 0; i < questions.poll.length; i++) {
-        let options = questions.poll[i];
-        let optionEl = document.createElement("button")
+    for (let i = 0; i < questions[0].poll.length; i++) {
+        let options = questions[0].choices[i];
+        
+        
 
         // var choice = document.createElement("button")
         choice.setAttribute("class", "choice")
