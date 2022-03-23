@@ -54,6 +54,8 @@ document.getElementById("hiScore").style.visibility = "hidden"
 
 startBtn.addEventListener("click", startQuiz);
 
+
+//function for timer
 function startTimer() {
   let timerInterval = setInterval(() => {
     secondsLeft--;
@@ -69,6 +71,7 @@ function startTimer() {
 
 };
 
+//function that starts the quiz
 function startQuiz() {
     startTimer();
     document.getElementById("start").style.display = "none";
@@ -83,6 +86,7 @@ function startQuiz() {
 
 }
 
+//this function displays the question and answers 
 function displayQuestions() {
     let pollEl = questions[questionIndex].poll;
 
@@ -104,14 +108,10 @@ function displayQuestions() {
     choice4Container.textContent = choice4;
     choice4Container.addEventListener("click", changeQuestion);
     
-    // multipleChoice.textContent = questions
-    // for (let i = 0; i < questions[0].poll.length; i++) {
-        
-    //   poll[i]++ 
-        
-    //     }
+    
      };
 
+//this function cycles through questions after you select an answer
 function changeQuestion(event) {
   console.log(event.target.textContent);
   let userChoice = event.target.textContent;
@@ -128,6 +128,7 @@ function changeQuestion(event) {
   }
 };
 
+//function ends game and prompts you to enter initials
 function endGame(Interval) {
   console.log(secondsLeft);
   clearInterval(Interval)

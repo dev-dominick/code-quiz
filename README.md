@@ -31,7 +31,7 @@ No installation is required to run this application.
 
 https://dev-dominick.github.io/code-quiz/
 
-![alt text](./img/quiz-pic.png)
+![alt text](./img/code-quiz.png)
 
 
 ## Credits
