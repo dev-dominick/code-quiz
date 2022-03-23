@@ -59,9 +59,10 @@ function startTimer() {
     secondsLeft--;
     clock.textContent = "Time: " + secondsLeft;
 
-    if (secondsLeft <= 0) {
+    if (secondsLeft <= 0 || questionIndex > questions.length -1) {
       
-      clearInterval(timerInterval);
+      // clearInterval(timerInterval);
+      endGame(timerInterval);
     }
 
   }, 1000);
@@ -72,7 +73,7 @@ function startQuiz() {
     startTimer();
     document.getElementById("start").style.display = "none";
     document.getElementById("end").style.display = "none";
-    // document.getElementById("choices").style.display = "inline"
+    document.getElementById("choices").style.display = "inline"
     displayQuestions();
     document.getElementById("btn1").style.visibility = "visible";
     document.getElementById("btn2").style.visibility = "visible";
@@ -127,15 +128,18 @@ function changeQuestion(event) {
   }
 };
 
-function endGame() {
+function endGame(Interval) {
   console.log(secondsLeft);
-  clearInterval(timerInterval)
-
-  if (secondsLeft <= 0 ) {
-    prompt("Game is over!")
-  }
-
-
+  clearInterval(Interval)
+  prompt("Game is over! Please enter initials!");
+  
 }
+
+// function altEndGame() {
+//   var finalScore = secondsLeft;
+//   localStorage.setItem("userScore", finalScore)
+//   window.location.href = "./highScore.html"
+
+// }
 
 
